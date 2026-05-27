@@ -34,7 +34,7 @@ Danach im Browser `http://localhost:8000` oeffnen.
 ## Deployment zu netcup
 
 Der Workflow `.github/workflows/deploy.yml` deployed bei jedem Push auf `main`
-den Inhalt von `public/` per SFTP auf den Server.
+den Inhalt von `public/` per SSH/SCP auf den Server.
 
 Eine ausfuehrliche Schritt-fuer-Schritt-Anleitung zum Ermitteln und Eintragen
 der Secrets steht in `docs/repository-secrets.md`.

@@ -36,15 +36,12 @@ jobs:
           ssh-keygen -y -f ~/.ssh/deploy_key > /dev/null
           ssh-keyscan -T 20 -p "$SSH_PORT" "$NETCUP_SSH_HOST" >> ~/.ssh/known_hosts
 
-      - name: Install deployment tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y lftp
-
-      - name: Deploy public folder with SFTP
+      - name: Deploy public folder with SSH
         run: |
           SSH_PORT="${NETCUP_SSH_PORT:-22}"
 
-          lftp \
-            -e "set sftp:connect-program 'ssh -a -x -i ~/.ssh/deploy_key -p $SSH_PORT'; mirror --reverse --delete --verbose public/ $NETCUP_REMOTE_PATH; bye" \
-            "sftp://$NETCUP_SSH_USER@$NETCUP_SSH_HOST"
+          ssh -i ~/.ssh/deploy_key -p "$SSH_PORT" "$NETCUP_SSH_USER@$NETCUP_SSH_HOST" \
+            "mkdir -p '$NETCUP_REMOTE_PATH'"
+
+          scp -i ~/.ssh/deploy_key -P "$SSH_PORT" -r public/. \
+            "$NETCUP_SSH_USER@$NETCUP_SSH_HOST:$NETCUP_REMOTE_PATH"

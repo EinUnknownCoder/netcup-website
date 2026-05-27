@@ -2,7 +2,7 @@
 
 Diese Anleitung beschreibt, wie du die Werte fuer den GitHub-Actions-Workflow
 `.github/workflows/deploy.yml` bekommst und in GitHub als Repository-Secrets
-eintraegst. Der Workflow deployed per SFTP, weil auf netcup-Webhosting nicht
+eintraegst. Der Workflow deployed per SSH/SCP, weil auf netcup-Webhosting nicht
 zwingend `rsync` auf dem Server installiert ist.
 
 Der Workflow braucht diese Secrets:
@@ -77,9 +77,8 @@ Das wird:
 NETCUP_REMOTE_PATH=/httpdocs/
 ```
 
-Wichtig: Der Workflow nutzt `mirror --reverse --delete`. Alles im Zielordner,
-was nicht in `public/` liegt, wird beim Deploy geloescht. Verwende deshalb nur
-den Ordner, der ausschliesslich diese Webseite enthalten soll.
+Der Workflow kopiert den Inhalt von `public/` in diesen Zielordner. Bestehende
+Dateien mit gleichem Namen werden ueberschrieben.
 
 ## 4. Deploy-SSH-Key erzeugen
 
@@ -192,7 +191,7 @@ Wenn alle Secrets gesetzt sind:
 3. Klicke `Run workflow`.
 4. Waehle `main` und starte den Lauf.
 
-Wenn der Lauf gruen ist, wurde `public/` per SFTP auf deinen netcup-Webspace
+Wenn der Lauf gruen ist, wurde `public/` per SSH/SCP auf deinen netcup-Webspace
 kopiert.
 
 ## Fehler: `Install SSH key` bricht bei `ssh-keyscan` ab
@@ -235,8 +234,8 @@ rsync error: error in rsync protocol data stream (code 12)
 ```
 
 dann funktioniert SSH bereits, aber auf dem netcup-Webhosting ist kein `rsync`
-installiert. Der Workflow verwendet deshalb SFTP mit `lftp mirror` statt
-`rsync`. Dafuer muss auf dem Server kein `rsync` vorhanden sein.
+installiert. Der Workflow verwendet deshalb `scp` statt `rsync`. Dafuer muss auf
+dem Server kein `rsync` vorhanden sein.
 
 ## Fehler: `Load key "...": error in libcrypto`
 
