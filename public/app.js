@@ -48,51 +48,65 @@ const renderStats = (concerts) => {
 };
 
 const renderConcerts = (concerts) => {
+  const header = document.createElement("div");
+  header.className = "concert-list-header";
+  ["Datum", "Artist", "Event", "Ort", "Typ"].forEach((label) => {
+    const cell = document.createElement("span");
+    cell.textContent = label;
+    header.append(cell);
+  });
+
   list.replaceChildren(
+    header,
     ...concerts.map((concert) => {
       const card = document.createElement("article");
       card.className = "concert-card";
 
       const date = document.createElement("div");
-      date.className = "concert-date";
-      date.textContent = formatDateRange(concert);
+      date.className = "concert-date concert-cell";
+      date.append(createLabel("Datum"));
+      date.append(document.createTextNode(formatDateRange(concert)));
 
-      const content = document.createElement("div");
-      content.className = "concert-main";
-
+      const artist = document.createElement("div");
+      artist.className = "concert-cell";
+      artist.append(createLabel("Artist"));
       const title = document.createElement("h3");
       title.textContent = concert.artist;
+      artist.append(title);
 
+      const event = document.createElement("div");
+      event.className = "concert-event concert-cell";
+      event.append(createLabel("Event"));
+      event.append(document.createTextNode(concert.event ?? "Live"));
+
+      const place = document.createElement("div");
+      place.className = "concert-cell";
+      place.append(createLabel("Ort"));
+      const venue = document.createElement("p");
+      venue.className = "concert-venue";
+      venue.textContent = concert.venue;
       const meta = document.createElement("p");
       meta.className = "concert-meta";
-      meta.textContent = [concert.venue, concert.city, concert.country]
-        .filter(Boolean)
-        .join(" · ");
-
-      const tags = document.createElement("div");
-      tags.className = "concert-tags";
-
-      [concert.tour, concert.era, concert.memory]
-        .filter(Boolean)
-        .forEach((value) => {
-          const tag = document.createElement("span");
-          tag.className = "concert-tag";
-          tag.textContent = value;
-          tags.append(tag);
-        });
-
-      content.append(title, meta, tags);
+      meta.textContent = [concert.city, concert.country].filter(Boolean).join(" · ");
+      place.append(venue, meta);
 
       const kind = document.createElement("span");
       kind.className = "concert-kind";
-      kind.textContent = concert.type ?? "Konzert";
+      kind.textContent = concert.type ?? "Concert";
 
-      card.append(date, content, kind);
+      card.append(date, artist, event, place, kind);
       return card;
     }),
   );
 
   emptyState.hidden = concerts.length > 0;
+};
+
+const createLabel = (text) => {
+  const label = document.createElement("span");
+  label.className = "concert-label";
+  label.textContent = text;
+  return label;
 };
 
 const filterConcerts = (concerts, query) => {
@@ -106,9 +120,7 @@ const filterConcerts = (concerts, query) => {
       concert.city,
       concert.country,
       concert.type,
-      concert.tour,
-      concert.era,
-      concert.memory,
+      concert.event,
       concert.date,
       concert.dateEnd,
     ]
@@ -124,10 +136,23 @@ const sortConcerts = (concerts) => {
   const direction = state.sortDirection === "asc" ? 1 : -1;
 
   return [...concerts].sort((a, b) => {
-    const valueA = a[state.sortKey] ?? "";
-    const valueB = b[state.sortKey] ?? "";
+    const sortKeys = {
+      artist: ["artist", "date", "event"],
+      city: ["city", "artist", "date"],
+      date: ["date", "artist", "event"],
+    }[state.sortKey];
 
-    return collator.compare(valueA, valueB) * direction;
+    for (const key of sortKeys) {
+      const valueA = a[key] ?? "";
+      const valueB = b[key] ?? "";
+      const result = collator.compare(valueA, valueB);
+
+      if (result !== 0) {
+        return result * direction;
+      }
+    }
+
+    return 0;
   });
 };
 
