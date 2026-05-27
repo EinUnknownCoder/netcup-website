@@ -352,6 +352,15 @@
   },
   {
     "date": "2026-05-02",
+    "artist": "E Sens",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
     "artist": "Bobby",
     "event": "HIPHOPPLAYA Festival 2026",
     "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
@@ -691,6 +700,15 @@
     "city": "Seoul",
     "country": "South Korea",
     "type": "Concert"
+  },
+  {
+    "date": "2025-09-25",
+    "artist": "YENA",
+    "event": "Seoil University Festival",
+    "venue": "Seoil University",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Festival"
   },
   {
     "date": "2025-04-17",
