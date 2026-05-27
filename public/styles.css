@@ -203,10 +203,15 @@ h2 {
   letter-spacing: 0;
 }
 
+.list-tools {
+  display: grid;
+  gap: 12px;
+  min-width: min(430px, 100%);
+}
+
 .search {
   display: grid;
   gap: 8px;
-  min-width: min(380px, 100%);
   color: var(--muted);
   font-size: 0.82rem;
   font-weight: 900;
@@ -232,6 +237,39 @@ h2 {
 .search input:focus {
   border-color: var(--cyan);
   box-shadow: 0 0 0 4px rgba(56, 232, 255, 0.18);
+}
+
+.sort-control {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.sort-button {
+  min-height: 38px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.sort-button:hover,
+.sort-button:focus-visible {
+  color: var(--ink);
+  outline: none;
+}
+
+.sort-button.is-active {
+  background: linear-gradient(135deg, var(--pink), var(--cyan));
+  color: #17091c;
 }
 
 .concert-list {

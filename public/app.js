@@ -1,9 +1,16 @@
 const list = document.querySelector("#concert-list");
 const emptyState = document.querySelector("#empty-state");
 const searchInput = document.querySelector("#search-input");
+const sortButtons = document.querySelectorAll("[data-sort]");
 const artistCount = document.querySelector("#artist-count");
 const concertCount = document.querySelector("#concert-count");
 const cityCount = document.querySelector("#city-count");
+
+const state = {
+  sortKey: "date",
+  sortDirection: "desc",
+  concerts: [],
+};
 
 const collator = new Intl.Collator("de", {
   numeric: true,
@@ -19,6 +26,14 @@ const formatDate = (value) => {
     month: "short",
     day: "2-digit",
   }).format(date);
+};
+
+const formatDateRange = (concert) => {
+  if (!concert.dateEnd || concert.dateEnd === concert.date) {
+    return formatDate(concert.date);
+  }
+
+  return `${formatDate(concert.date)} – ${formatDate(concert.dateEnd)}`;
 };
 
 const normalize = (value) => value.toString().toLowerCase().trim();
@@ -40,7 +55,7 @@ const renderConcerts = (concerts) => {
 
       const date = document.createElement("div");
       date.className = "concert-date";
-      date.textContent = formatDate(concert.date);
+      date.textContent = formatDateRange(concert);
 
       const content = document.createElement("div");
       content.className = "concert-main";
@@ -95,6 +110,7 @@ const filterConcerts = (concerts, query) => {
       concert.era,
       concert.memory,
       concert.date,
+      concert.dateEnd,
     ]
       .filter(Boolean)
       .map(normalize)
@@ -104,16 +120,65 @@ const filterConcerts = (concerts, query) => {
   });
 };
 
+const sortConcerts = (concerts) => {
+  const direction = state.sortDirection === "asc" ? 1 : -1;
+
+  return [...concerts].sort((a, b) => {
+    const valueA = a[state.sortKey] ?? "";
+    const valueB = b[state.sortKey] ?? "";
+
+    return collator.compare(valueA, valueB) * direction;
+  });
+};
+
+const updateSortButtons = () => {
+  sortButtons.forEach((button) => {
+    const isActive = button.dataset.sort === state.sortKey;
+    const directionLabel = state.sortDirection === "asc" ? "↑" : "↓";
+    const label = button.dataset.sort === "date"
+      ? "Datum"
+      : button.dataset.sort === "artist"
+        ? "Artist"
+        : "Stadt";
+
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", isActive.toString());
+    button.textContent = isActive ? `${label} ${directionLabel}` : label;
+  });
+};
+
+const renderCurrentView = () => {
+  const filteredConcerts = filterConcerts(state.concerts, searchInput.value);
+  renderConcerts(sortConcerts(filteredConcerts));
+};
+
 const init = async () => {
   const response = await fetch("./data/concerts.json");
   const concerts = await response.json();
-  const sortedConcerts = concerts.sort((a, b) => collator.compare(b.date, a.date));
+  state.concerts = concerts;
 
-  renderStats(sortedConcerts);
-  renderConcerts(sortedConcerts);
+  renderStats(state.concerts);
+  updateSortButtons();
+  renderCurrentView();
 
   searchInput.addEventListener("input", () => {
-    renderConcerts(filterConcerts(sortedConcerts, searchInput.value));
+    renderCurrentView();
+  });
+
+  sortButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const nextSortKey = button.dataset.sort;
+
+      if (state.sortKey === nextSortKey) {
+        state.sortDirection = state.sortDirection === "asc" ? "desc" : "asc";
+      } else {
+        state.sortKey = nextSortKey;
+        state.sortDirection = nextSortKey === "date" ? "desc" : "asc";
+      }
+
+      updateSortButtons();
+      renderCurrentView();
+    });
   });
 };
 
