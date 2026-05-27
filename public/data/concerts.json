@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-08-23",
+    "artist": "Joji",
+    "event": "SOLARIS",
+    "venue": "COS Torwar",
+    "city": "Warsaw",
+    "country": "Poland",
+    "type": "Concert"
+  },
+  {
+    "date": "2026-06-12",
+    "artist": "WOODZ",
+    "event": "2026 WOODZ WORLD TOUR 'Archive. 1'",
+    "venue": "ZOOM Frankfurt",
+    "city": "Frankfurt",
+    "country": "Germany",
+    "type": "Concert"
+  },
+  {
     "date": "2026-05-26",
     "artist": "TWICE",
     "event": "THIS IS FOR",
@@ -672,6 +690,33 @@
     "venue": "Jangchung Arena",
     "city": "Seoul",
     "country": "South Korea",
+    "type": "Concert"
+  },
+  {
+    "date": "2025-04-17",
+    "artist": "GEMINI",
+    "event": "GEMINI SEASON 'Miles Away'",
+    "venue": "Bürgerhaus Stollwerck",
+    "city": "Cologne",
+    "country": "Germany",
+    "type": "Concert"
+  },
+  {
+    "date": "2025-04-17",
+    "artist": "Blase",
+    "event": "GEMINI SEASON 'Miles Away'",
+    "venue": "Bürgerhaus Stollwerck",
+    "city": "Cologne",
+    "country": "Germany",
+    "type": "Concert"
+  },
+  {
+    "date": "2025-03-03",
+    "artist": "KISS OF LIFE",
+    "event": "KISS ROAD",
+    "venue": "TonHalle München",
+    "city": "Munich",
+    "country": "Germany",
     "type": "Concert"
   },
   {

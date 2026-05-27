@@ -398,10 +398,39 @@ h2 {
   }
 
   .stats,
-  .section-heading,
-  .concert-list-header,
-  .concert-card {
+  .concert-list-header {
     grid-template-columns: 1fr;
+  }
+
+  .stats {
+    margin-bottom: 42px;
+  }
+
+  .section-heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    gap: 18px;
+    margin-bottom: 22px;
+  }
+
+  .list-tools {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .search input {
+    min-height: 44px;
+  }
+
+  .sort-control {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sort-button {
+    min-width: 0;
+    min-height: 36px;
+    padding: 0 8px;
   }
 
   .concert-list-header {
@@ -409,24 +438,58 @@ h2 {
   }
 
   .concert-card {
-    gap: 12px;
+    grid-template-columns: minmax(88px, 0.65fr) minmax(0, 1.35fr);
+    grid-template-areas:
+      "date artist"
+      "date event"
+      "place place"
+      "kind kind";
+    align-items: start;
+    gap: 7px 14px;
+    padding: 14px 14px 14px 18px;
+  }
+
+  .concert-date {
+    grid-area: date;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  .concert-card .concert-cell:nth-child(2) {
+    grid-area: artist;
+  }
+
+  .concert-event {
+    grid-area: event;
+    font-size: 0.96rem;
+    line-height: 1.25;
+  }
+
+  .concert-card .concert-cell:nth-child(4) {
+    grid-area: place;
+    padding-top: 6px;
+  }
+
+  .concert-card h3 {
+    font-size: 1.08rem;
+    line-height: 1.18;
+  }
+
+  .concert-venue,
+  .concert-meta {
+    font-size: 0.95rem;
+    line-height: 1.35;
   }
 
   .concert-label {
-    display: block;
-    margin-bottom: 2px;
-    color: var(--soft);
-    font-size: 0.7rem;
-    font-weight: 950;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  .section-heading {
-    align-items: stretch;
+    display: none;
   }
 
   .concert-kind {
+    grid-area: kind;
     justify-self: start;
+    min-height: 26px;
+    padding: 4px 9px;
+    font-size: 0.72rem;
   }
 }
