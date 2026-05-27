@@ -33,6 +33,7 @@ jobs:
           chmod 700 ~/.ssh
           printf '%s\n' "$NETCUP_SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
+          ssh-keygen -y -f ~/.ssh/deploy_key > /dev/null
           ssh-keyscan -T 20 -p "$SSH_PORT" "$NETCUP_SSH_HOST" >> ~/.ssh/known_hosts
 
       - name: Deploy public folder with rsync

@@ -225,6 +225,59 @@ ssh -i ~/.ssh/netcup_github_actions -p 22 hosting123456@hosting123456.a2f00.netc
 
 Erst wenn dieser Login klappt, lohnt sich der naechste GitHub-Actions-Lauf.
 
+## Fehler: `Load key "...": error in libcrypto`
+
+Wenn der Workflow bei `rsync` mit dieser Meldung abbricht:
+
+```text
+Load key "/home/runner/.ssh/deploy_key": error in libcrypto
+Permission denied (publickey,password).
+```
+
+dann kann GitHub Actions den privaten SSH-Key nicht lesen. Host und Port sind in
+diesem Fall bereits erreichbar, aber `NETCUP_SSH_KEY` ist falsch formatiert oder
+passt nicht zum hinterlegten Public Key.
+
+Pruefe `NETCUP_SSH_KEY` in GitHub:
+
+- Es muss der private Key sein, nicht die `.pub`-Datei.
+- Der Wert muss mit `-----BEGIN OPENSSH PRIVATE KEY-----` beginnen.
+- Der Wert muss mit `-----END OPENSSH PRIVATE KEY-----` enden.
+- Kopiere den kompletten Key mehrzeilig in GitHub, nicht mit sichtbaren `\n`.
+- Der Key darf fuer dieses einfache Deployment keine Passphrase haben.
+
+So erzeugst du bei Bedarf einen neuen Deploy-Key ohne Passphrase:
+
+```bash
+ssh-keygen -t ed25519 -C "github-actions-netcup-deploy" -f ~/.ssh/netcup_github_actions
+```
+
+Bei `Enter passphrase` und `Enter same passphrase again` jeweils nur Enter
+druecken.
+
+Public Key bei netcup hinterlegen:
+
+```bash
+cat ~/.ssh/netcup_github_actions.pub
+```
+
+Private Key in GitHub als `NETCUP_SSH_KEY` eintragen:
+
+```bash
+cat ~/.ssh/netcup_github_actions
+```
+
+Teste lokal vor dem naechsten GitHub-Actions-Lauf:
+
+```bash
+ssh-keygen -y -f ~/.ssh/netcup_github_actions > /dev/null
+ssh -i ~/.ssh/netcup_github_actions -p 22 hosting123456@hosting123456.a2f00.netcup.net
+```
+
+Wenn `ssh-keygen -y` eine Passphrase verlangt, hat der Key eine Passphrase. Wenn
+der SSH-Login trotz korrektem Key fehlschlaegt, ist der Public Key noch nicht
+fuer diesen netcup-Benutzer hinterlegt.
+
 ## Quellen
 
 - GitHub Docs: `Using secrets in GitHub Actions`
