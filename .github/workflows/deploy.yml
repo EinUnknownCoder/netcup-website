@@ -9,6 +9,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      NETCUP_SSH_HOST: ${{ secrets.NETCUP_SSH_HOST }}
+      NETCUP_SSH_PORT: ${{ secrets.NETCUP_SSH_PORT }}
+      NETCUP_SSH_USER: ${{ secrets.NETCUP_SSH_USER }}
+      NETCUP_SSH_KEY: ${{ secrets.NETCUP_SSH_KEY }}
+      NETCUP_REMOTE_PATH: ${{ secrets.NETCUP_REMOTE_PATH }}
 
     steps:
       - name: Check out repository
@@ -16,15 +22,24 @@ jobs:
 
       - name: Install SSH key
         run: |
+          : "${NETCUP_SSH_HOST:?Missing NETCUP_SSH_HOST repository secret}"
+          : "${NETCUP_SSH_USER:?Missing NETCUP_SSH_USER repository secret}"
+          : "${NETCUP_SSH_KEY:?Missing NETCUP_SSH_KEY repository secret}"
+          : "${NETCUP_REMOTE_PATH:?Missing NETCUP_REMOTE_PATH repository secret}"
+
+          SSH_PORT="${NETCUP_SSH_PORT:-22}"
+
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          echo "${{ secrets.NETCUP_SSH_KEY }}" > ~/.ssh/deploy_key
+          printf '%s\n' "$NETCUP_SSH_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -p "${{ secrets.NETCUP_SSH_PORT }}" "${{ secrets.NETCUP_SSH_HOST }}" >> ~/.ssh/known_hosts
+          ssh-keyscan -T 20 -p "$SSH_PORT" "$NETCUP_SSH_HOST" >> ~/.ssh/known_hosts
 
       - name: Deploy public folder with rsync
         run: |
+          SSH_PORT="${NETCUP_SSH_PORT:-22}"
+
           rsync -az --delete \
-            -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.NETCUP_SSH_PORT }}" \
+            -e "ssh -i ~/.ssh/deploy_key -p $SSH_PORT" \
             public/ \
-            "${{ secrets.NETCUP_SSH_USER }}@${{ secrets.NETCUP_SSH_HOST }}:${{ secrets.NETCUP_REMOTE_PATH }}"
+            "$NETCUP_SSH_USER@$NETCUP_SSH_HOST:$NETCUP_REMOTE_PATH"

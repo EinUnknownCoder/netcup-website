@@ -36,6 +36,9 @@ Danach im Browser `http://localhost:8000` oeffnen.
 Der Workflow `.github/workflows/deploy.yml` deployed bei jedem Push auf `main`
 den Inhalt von `public/` per `rsync` auf den Server.
 
+Eine ausfuehrliche Schritt-fuer-Schritt-Anleitung zum Ermitteln und Eintragen
+der Secrets steht in `docs/repository-secrets.md`.
+
 In GitHub muessen unter `Settings > Secrets and variables > Actions` diese
 Repository-Secrets angelegt werden:
 
