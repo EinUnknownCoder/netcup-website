@@ -43,6 +43,8 @@ const renderConcerts = (concerts) => {
       date.textContent = formatDate(concert.date);
 
       const content = document.createElement("div");
+      content.className = "concert-main";
+
       const title = document.createElement("h3");
       title.textContent = concert.artist;
 
@@ -52,7 +54,19 @@ const renderConcerts = (concerts) => {
         .filter(Boolean)
         .join(" · ");
 
-      content.append(title, meta);
+      const tags = document.createElement("div");
+      tags.className = "concert-tags";
+
+      [concert.tour, concert.era, concert.memory]
+        .filter(Boolean)
+        .forEach((value) => {
+          const tag = document.createElement("span");
+          tag.className = "concert-tag";
+          tag.textContent = value;
+          tags.append(tag);
+        });
+
+      content.append(title, meta, tags);
 
       const kind = document.createElement("span");
       kind.className = "concert-kind";
@@ -77,6 +91,9 @@ const filterConcerts = (concerts, query) => {
       concert.city,
       concert.country,
       concert.type,
+      concert.tour,
+      concert.era,
+      concert.memory,
       concert.date,
     ]
       .filter(Boolean)

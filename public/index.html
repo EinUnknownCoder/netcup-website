@@ -5,25 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Eine persönliche Sammlung von Konzerten und Artists, die ich live gesehen habe."
+      content="Eine persönliche K-Pop Konzertchronik mit allen Artists, Shows und Tour-Momenten, die ich live erlebt habe."
     />
-    <title>Meine Konzertchronik</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <title>K-Pop Konzertchronik</title>
+    <link rel="stylesheet" href="styles.css?v=20260527-kpop" />
   </head>
   <body>
-    <header class="site-header">
+    <header class="hero-shell">
       <nav class="topbar" aria-label="Hauptnavigation">
-        <a class="brand" href="#">Konzertchronik</a>
+        <a class="brand" href="#">K-Pop Archive</a>
         <a class="topbar-link" href="#konzerte">Konzerte</a>
       </nav>
 
       <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow">Live gesehen, laut erinnert</p>
-        <h1 id="page-title">Meine Konzertchronik</h1>
-        <p class="hero-copy">
-          Eine wachsende Liste aller Artists, Festivals und Shows, die ich live
-          erlebt habe.
-        </p>
+        <div class="hero-content">
+          <p class="eyebrow">Lightsticks · Fanchants · Live Memories</p>
+          <h1 id="page-title">Meine K-Pop Konzertchronik</h1>
+          <p class="hero-copy">
+            Alle Artists, Tours und Bühnenmomente, die ich live gesehen habe,
+            gesammelt wie ein persönliches Photocard-Binder fürs Herz.
+          </p>
+        </div>
       </section>
     </header>
 
@@ -35,7 +37,7 @@
         </article>
         <article>
           <span id="concert-count">0</span>
-          <p>Einträge</p>
+          <p>Live-Shows</p>
         </article>
         <article>
           <span id="city-count">0</span>
@@ -46,15 +48,15 @@
       <section id="konzerte" class="concerts" aria-labelledby="concerts-title">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Archiv</p>
-            <h2 id="concerts-title">Gesehene Konzerte</h2>
+            <p class="eyebrow">Archive</p>
+            <h2 id="concerts-title">Live gesehen</h2>
           </div>
           <label class="search">
             <span>Suchen</span>
             <input
               id="search-input"
               type="search"
-              placeholder="Artist, Ort, Jahr..."
+              placeholder="Artist, Tour, Stadt, Jahr..."
               autocomplete="off"
             />
           </label>
@@ -62,15 +64,15 @@
 
         <div id="concert-list" class="concert-list" aria-live="polite"></div>
         <p id="empty-state" class="empty-state" hidden>
-          Keine passenden Konzerte gefunden.
+          Kein Match im Archiv.
         </p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Gebaut als persönliches Live-Musik-Archiv.</p>
+      <p>Made for encore nights, bias wreckers und Songs, die live anders treffen.</p>
     </footer>
 
-    <script src="./app.js" type="module"></script>
+    <script src="app.js?v=20260527-kpop" type="module"></script>
   </body>
 </html>

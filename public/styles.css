@@ -1,15 +1,17 @@
 :root {
-  color-scheme: light;
-  --bg: #f7f5ef;
-  --ink: #191a1c;
-  --muted: #62666f;
-  --paper: #fffdfa;
-  --line: #ded8cc;
-  --accent: #d6422b;
-  --accent-dark: #9e271b;
-  --blue: #1f6f8b;
-  --green: #417a43;
-  --shadow: 0 18px 50px rgba(31, 32, 35, 0.12);
+  color-scheme: dark;
+  --bg: #070713;
+  --ink: #fff7ff;
+  --muted: #bfc0d4;
+  --soft: #8f90aa;
+  --panel: rgba(18, 19, 42, 0.78);
+  --panel-strong: rgba(27, 27, 58, 0.9);
+  --line: rgba(255, 255, 255, 0.16);
+  --pink: #ff4fd8;
+  --cyan: #38e8ff;
+  --violet: #8a6bff;
+  --lime: #b8ff5d;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.38);
 }
 
 * {
@@ -22,10 +24,11 @@ html {
 
 body {
   margin: 0;
+  min-width: 320px;
   background:
-    linear-gradient(135deg, rgba(214, 66, 43, 0.08), transparent 38%),
-    linear-gradient(315deg, rgba(31, 111, 139, 0.1), transparent 34%),
-    var(--bg);
+    radial-gradient(circle at 15% 15%, rgba(255, 79, 216, 0.26), transparent 28rem),
+    radial-gradient(circle at 82% 8%, rgba(56, 232, 255, 0.18), transparent 24rem),
+    linear-gradient(180deg, #080817 0%, #121128 46%, #070713 100%);
   color: var(--ink);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -33,15 +36,37 @@ body {
   line-height: 1.5;
 }
 
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(180deg, #000, transparent 78%);
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-.site-header,
+.hero-shell {
+  min-height: 82vh;
+  background:
+    linear-gradient(90deg, rgba(7, 7, 19, 0.96) 0%, rgba(7, 7, 19, 0.74) 42%, rgba(7, 7, 19, 0.18) 100%),
+    linear-gradient(0deg, var(--bg) 0%, transparent 35%),
+    url("./assets/kpop-hero.png") center right / cover no-repeat;
+}
+
+.topbar,
+.hero,
 main,
 .site-footer {
-  width: min(1120px, calc(100% - 32px));
+  width: min(1160px, calc(100% - 32px));
   margin: 0 auto;
 }
 
@@ -53,83 +78,114 @@ main,
 }
 
 .brand {
-  font-weight: 800;
-  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.brand::before {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  content: "";
+  background: var(--pink);
+  box-shadow: 0 0 18px var(--pink), 18px 0 24px var(--cyan);
 }
 
 .topbar-link {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 800;
+  backdrop-filter: blur(14px);
 }
 
 .hero {
-  min-height: 48vh;
   display: grid;
-  align-content: center;
-  padding: 72px 0 56px;
+  align-items: center;
+  min-height: calc(82vh - 88px);
+  padding: 54px 0 96px;
+}
+
+.hero-content {
+  max-width: 720px;
 }
 
 .eyebrow {
-  margin: 0 0 10px;
-  color: var(--accent-dark);
+  margin: 0 0 12px;
+  color: var(--cyan);
   font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
+  font-weight: 900;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
 h1,
 h2,
+h3,
 p {
   margin-top: 0;
 }
 
 h1 {
-  max-width: 840px;
-  margin-bottom: 18px;
-  font-size: clamp(3rem, 8vw, 7.5rem);
-  line-height: 0.92;
+  margin-bottom: 22px;
+  font-size: clamp(3.2rem, 9vw, 7.6rem);
+  line-height: 0.9;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 .hero-copy {
-  max-width: 640px;
+  max-width: 620px;
+  margin-bottom: 0;
   color: var(--muted);
-  font-size: 1.18rem;
+  font-size: 1.16rem;
+  font-weight: 650;
 }
 
 .stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
+  margin-top: -48px;
   margin-bottom: 64px;
 }
 
 .stats article {
-  min-height: 112px;
+  min-height: 126px;
   padding: 22px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(255, 253, 250, 0.78);
+  background: var(--panel);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
 }
 
 .stats span {
   display: block;
-  color: var(--blue);
-  font-size: 2.4rem;
-  font-weight: 900;
+  color: var(--ink);
+  font-size: 2.65rem;
+  font-weight: 950;
   line-height: 1;
+  text-shadow: 0 0 24px rgba(255, 79, 216, 0.65);
 }
 
 .stats p {
-  margin: 8px 0 0;
+  margin: 10px 0 0;
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 850;
 }
 
 .concerts {
-  padding: 48px 0 40px;
+  padding: 28px 0 42px;
 }
 
 .section-heading {
@@ -142,62 +198,85 @@ h1 {
 
 h2 {
   margin-bottom: 0;
-  font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 1;
+  font-size: clamp(2.35rem, 5vw, 4.75rem);
+  line-height: 0.95;
   letter-spacing: 0;
 }
 
 .search {
   display: grid;
-  gap: 7px;
-  min-width: min(360px, 100%);
+  gap: 8px;
+  min-width: min(380px, 100%);
   color: var(--muted);
-  font-size: 0.85rem;
-  font-weight: 800;
+  font-size: 0.82rem;
+  font-weight: 900;
 }
 
 .search input {
   width: 100%;
-  min-height: 46px;
+  min-height: 48px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--paper);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--ink);
   font: inherit;
-  font-weight: 650;
-  padding: 10px 14px;
+  font-weight: 750;
+  padding: 11px 14px;
   outline: none;
 }
 
+.search input::placeholder {
+  color: rgba(255, 247, 255, 0.52);
+}
+
 .search input:focus {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 4px rgba(31, 111, 139, 0.14);
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 4px rgba(56, 232, 255, 0.18);
 }
 
 .concert-list {
   display: grid;
-  gap: 12px;
+  gap: 14px;
 }
 
 .concert-card {
+  position: relative;
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr) auto;
+  grid-template-columns: 118px minmax(0, 1fr) auto;
   gap: 18px;
   align-items: center;
+  overflow: hidden;
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--paper);
+  background:
+    linear-gradient(135deg, rgba(255, 79, 216, 0.12), transparent 36%),
+    linear-gradient(315deg, rgba(56, 232, 255, 0.1), transparent 42%),
+    var(--panel-strong);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.24);
+}
+
+.concert-card::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  content: "";
+  background: linear-gradient(180deg, var(--pink), var(--cyan), var(--lime));
 }
 
 .concert-date {
-  color: var(--accent-dark);
-  font-weight: 900;
+  color: var(--cyan);
+  font-weight: 950;
+}
+
+.concert-main {
+  min-width: 0;
 }
 
 .concert-card h3 {
   margin: 0 0 5px;
-  font-size: 1.2rem;
+  font-size: 1.28rem;
+  line-height: 1.1;
 }
 
 .concert-meta {
@@ -205,42 +284,70 @@ h2 {
   color: var(--muted);
 }
 
+.concert-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.concert-tag,
 .concert-kind {
-  justify-self: end;
-  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 5px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 999px;
-  background: rgba(65, 122, 67, 0.12);
-  color: var(--green);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 900;
   white-space: nowrap;
+}
+
+.concert-tag {
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.concert-kind {
+  justify-self: end;
+  color: #17091c;
+  background: linear-gradient(135deg, var(--pink), var(--cyan));
 }
 
 .empty-state {
   padding: 24px 0;
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .site-footer {
-  padding: 42px 0;
-  color: var(--muted);
+  padding: 44px 0;
+  color: var(--soft);
 }
 
 .site-footer p {
   margin-bottom: 0;
 }
 
-@media (max-width: 720px) {
-  .site-header,
+@media (max-width: 760px) {
+  .hero-shell {
+    min-height: 76vh;
+    background:
+      linear-gradient(180deg, rgba(7, 7, 19, 0.78) 0%, rgba(7, 7, 19, 0.94) 72%, var(--bg) 100%),
+      url("./assets/kpop-hero.png") center top / cover no-repeat;
+  }
+
+  .topbar,
+  .hero,
   main,
   .site-footer {
-    width: min(100% - 24px, 1120px);
+    width: min(100% - 24px, 1160px);
   }
 
   .hero {
-    min-height: 42vh;
-    padding: 48px 0 38px;
+    min-height: calc(76vh - 88px);
+    padding: 42px 0 78px;
   }
 
   .stats,

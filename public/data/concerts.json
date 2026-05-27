@@ -1,26 +1,35 @@
 [
   {
     "date": "2025-08-16",
-    "artist": "Beispiel Artist",
-    "venue": "Beispielhalle",
+    "artist": "K-Pop Artist",
+    "venue": "Arena",
     "city": "Berlin",
     "country": "Deutschland",
-    "type": "Konzert"
+    "type": "Concert",
+    "tour": "World Tour",
+    "era": "Comeback Era",
+    "memory": "Lightstick Night"
   },
   {
     "date": "2024-06-22",
-    "artist": "Festival Headliner",
-    "venue": "Sommer Festival",
+    "artist": "Girl Group Showcase",
+    "venue": "Festival Stage",
     "city": "Hamburg",
     "country": "Deutschland",
-    "type": "Festival"
+    "type": "Festival",
+    "tour": "K-Pop Night",
+    "era": "Summer Stage",
+    "memory": "Fanchants"
   },
   {
     "date": "2023-11-04",
-    "artist": "Support Act",
+    "artist": "Boy Group Live",
     "venue": "Club Bühne",
     "city": "Köln",
     "country": "Deutschland",
-    "type": "Clubshow"
+    "type": "Clubshow",
+    "tour": "Europe Stop",
+    "era": "Debut Era",
+    "memory": "Encore"
   }
 ]
