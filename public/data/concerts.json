@@ -18,13 +18,526 @@
     "type": "Concert"
   },
   {
+    "date": "2026-05-10",
+    "artist": "Gavy NJ",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "BABYMONSTER",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "Billlie",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "ILLIT",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "UNCHILD",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "Lee Ye Joon",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "Lee Chaeyeon",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "ifeye",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "KIIRAS",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "NAZE",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "NEXZ",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "XngHan&Xoul",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "NCT WISH",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "ORβIT",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "YUHZ",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "CORTIS",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "CRAVITY",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-05-10",
+    "artist": "TWS",
+    "event": "SBS Inkigayo",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
     "date": "2026-05-02",
-    "artist": "Various Artists",
+    "artist": "Jay Park",
     "event": "HIPHOPPLAYA Festival 2026",
     "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
     "city": "Goyang",
     "country": "South Korea",
     "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "LNGSHOT",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "Sik-K",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "HAON",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "JMIN",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "NOWIMYOUNG",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "Crush",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "Zion.T",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "Loco",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "GRAY",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "ELO",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "pH-1",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "BIG Naughty",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "LILBOI",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "Woodie Gochild",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "JUSTHIS",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "Lee Youngji",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "Bobby",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "Ash Island",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "Blase",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "CAMO",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "TXT",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "Xdinary Heroes",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "&TEAM",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "NCT WISH",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "KickFlip",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "CORTIS",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "MODYSSEY",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "Dayoung",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "Kim Jae Hwan",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "INI",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "LE SSERAFIM",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "KISS OF LIFE",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "EVNNE",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "AMPERS&ONE",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "RESCENE",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "CLOSE YOUR EYES",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "SANTOS BRAVOS",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "UNCHILD",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2026-04-26",
+    "artist": "Lee Ji Hoon",
+    "event": "SBS Inkigayo on the Go",
+    "venue": "Paradise City",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Music Show"
   },
   {
     "date": "2026-05-03",
@@ -163,7 +676,61 @@
   },
   {
     "date": "2024-10-05",
-    "artist": "Various Artists",
+    "artist": "aespa",
+    "event": "K-Link Festival 2024",
+    "venue": "INSPIRE Arena",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-10-05",
+    "artist": "MINHO",
+    "event": "K-Link Festival 2024",
+    "venue": "INSPIRE Arena",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-10-05",
+    "artist": "ITZY",
+    "event": "K-Link Festival 2024",
+    "venue": "INSPIRE Arena",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-10-05",
+    "artist": "RIIZE",
+    "event": "K-Link Festival 2024",
+    "venue": "INSPIRE Arena",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-10-05",
+    "artist": "THE BOYZ",
+    "event": "K-Link Festival 2024",
+    "venue": "INSPIRE Arena",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-10-05",
+    "artist": "NCT WISH",
+    "event": "K-Link Festival 2024",
+    "venue": "INSPIRE Arena",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-10-05",
+    "artist": "tripleS",
     "event": "K-Link Festival 2024",
     "venue": "INSPIRE Arena",
     "city": "Incheon",
@@ -172,7 +739,70 @@
   },
   {
     "date": "2024-09-29",
-    "artist": "Various Artists",
+    "artist": "ITZY",
+    "event": "Gangnam Festival 2024 K-Pop Concert",
+    "venue": "COEX East Square",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-09-29",
+    "artist": "OH MY GIRL",
+    "event": "Gangnam Festival 2024 K-Pop Concert",
+    "venue": "COEX East Square",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-09-29",
+    "artist": "Apink",
+    "event": "Gangnam Festival 2024 K-Pop Concert",
+    "venue": "COEX East Square",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-09-29",
+    "artist": "Rocky",
+    "event": "Gangnam Festival 2024 K-Pop Concert",
+    "venue": "COEX East Square",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-09-29",
+    "artist": "Lee Mujin",
+    "event": "Gangnam Festival 2024 K-Pop Concert",
+    "venue": "COEX East Square",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-09-29",
+    "artist": "Solar",
+    "event": "Gangnam Festival 2024 K-Pop Concert",
+    "venue": "COEX East Square",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-09-29",
+    "artist": "Guckkasten",
+    "event": "Gangnam Festival 2024 K-Pop Concert",
+    "venue": "COEX East Square",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-09-29",
+    "artist": "ONEUS",
     "event": "Gangnam Festival 2024 K-Pop Concert",
     "venue": "COEX East Square",
     "city": "Seoul",
@@ -187,6 +817,141 @@
     "city": "Seoul",
     "country": "South Korea",
     "type": "Fan Meeting"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "tripleS",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "Kim Jae Hwan",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "YOUNITE",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "ASMRZ",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "FANTASY BOYS",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "Kino",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "Kim Woojin",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "E'LAST",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "ASC2NT",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "The KingDom",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "Leo",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "82MAJOR",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "UNICODE",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "TOZ",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
+  },
+  {
+    "date": "2024-05-14",
+    "artist": "Na Tae Joo",
+    "event": "The Show",
+    "venue": "SBS Prism Tower",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Music Show"
   },
   {
     "date": "2024-02-24",
