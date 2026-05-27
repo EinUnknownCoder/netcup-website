@@ -2,7 +2,8 @@
 
 Diese Anleitung beschreibt, wie du die Werte fuer den GitHub-Actions-Workflow
 `.github/workflows/deploy.yml` bekommst und in GitHub als Repository-Secrets
-eintraegst.
+eintraegst. Der Workflow deployed per SFTP, weil auf netcup-Webhosting nicht
+zwingend `rsync` auf dem Server installiert ist.
 
 Der Workflow braucht diese Secrets:
 
@@ -12,7 +13,7 @@ Der Workflow braucht diese Secrets:
 | `NETCUP_SSH_PORT` | `22` | SSH-Port |
 | `NETCUP_SSH_USER` | `hosting123456` | SSH-/Webhosting-Benutzer |
 | `NETCUP_SSH_KEY` | kompletter privater Deploy-Key | Authentifizierung fuer GitHub Actions |
-| `NETCUP_REMOTE_PATH` | `/var/www/vhosts/deine-domain.de/httpdocs/` | Zielordner auf dem Webspace |
+| `NETCUP_REMOTE_PATH` | `/httpdocs/` | Zielordner auf dem Webspace |
 
 ## 1. Host und Benutzer bei netcup finden
 
@@ -51,7 +52,6 @@ ausgeliefert wird.
 Typische Varianten sind:
 
 ```text
-/var/www/vhosts/deine-domain.de/httpdocs/
 /httpdocs/
 /www/
 ```
@@ -74,12 +74,12 @@ find . -maxdepth 3 -type d -name "httpdocs"
 Das wird:
 
 ```text
-NETCUP_REMOTE_PATH=/var/www/vhosts/deine-domain.de/httpdocs/
+NETCUP_REMOTE_PATH=/httpdocs/
 ```
 
-Wichtig: Der Workflow nutzt `rsync --delete`. Alles im Zielordner, was nicht in
-`public/` liegt, wird beim Deploy geloescht. Verwende deshalb nur den Ordner,
-der ausschliesslich diese Webseite enthalten soll.
+Wichtig: Der Workflow nutzt `mirror --reverse --delete`. Alles im Zielordner,
+was nicht in `public/` liegt, wird beim Deploy geloescht. Verwende deshalb nur
+den Ordner, der ausschliesslich diese Webseite enthalten soll.
 
 ## 4. Deploy-SSH-Key erzeugen
 
@@ -192,7 +192,7 @@ Wenn alle Secrets gesetzt sind:
 3. Klicke `Run workflow`.
 4. Waehle `main` und starte den Lauf.
 
-Wenn der Lauf gruen ist, wurde `public/` per `rsync` auf deinen netcup-Webspace
+Wenn der Lauf gruen ist, wurde `public/` per SFTP auf deinen netcup-Webspace
 kopiert.
 
 ## Fehler: `Install SSH key` bricht bei `ssh-keyscan` ab
@@ -225,9 +225,22 @@ ssh -i ~/.ssh/netcup_github_actions -p 22 hosting123456@hosting123456.a2f00.netc
 
 Erst wenn dieser Login klappt, lohnt sich der naechste GitHub-Actions-Lauf.
 
+## Fehler: `rsync: command not found`
+
+Wenn im Deploy-Schritt diese Meldung erscheint:
+
+```text
+-: line 1: rsync: command not found
+rsync error: error in rsync protocol data stream (code 12)
+```
+
+dann funktioniert SSH bereits, aber auf dem netcup-Webhosting ist kein `rsync`
+installiert. Der Workflow verwendet deshalb SFTP mit `lftp mirror` statt
+`rsync`. Dafuer muss auf dem Server kein `rsync` vorhanden sein.
+
 ## Fehler: `Load key "...": error in libcrypto`
 
-Wenn der Workflow bei `rsync` mit dieser Meldung abbricht:
+Wenn der Workflow mit dieser Meldung abbricht:
 
 ```text
 Load key "/home/runner/.ssh/deploy_key": error in libcrypto
