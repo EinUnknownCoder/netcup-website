@@ -1,75 +1,75 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Eine persönliche K-Pop Konzertchronik mit allen Artists, Shows und Tour-Momenten, die ich live erlebt habe."
+      content="A personal K-pop concert archive with the artists, shows, festivals, and tour moments I have experienced live."
     />
-    <title>K-Pop Konzertchronik</title>
+    <title>K-Pop Concert Archive</title>
     <link rel="stylesheet" href="styles.css?v=20260527-list-v2" />
   </head>
   <body>
     <header class="hero-shell">
-      <nav class="topbar" aria-label="Hauptnavigation">
+      <nav class="topbar" aria-label="Main navigation">
         <a class="brand" href="#">K-Pop Archive</a>
-        <a class="topbar-link" href="#konzerte">Konzerte</a>
+        <a class="topbar-link" href="#concerts">Concerts</a>
       </nav>
 
       <section class="hero" aria-labelledby="page-title">
         <div class="hero-content">
           <p class="eyebrow">Lightsticks · Fanchants · Live Memories</p>
-          <h1 id="page-title">Meine K-Pop Konzertchronik</h1>
+          <h1 id="page-title">My K-Pop Concert Archive</h1>
           <p class="hero-copy">
-            Alle Artists, Tours und Bühnenmomente, die ich live gesehen habe,
-            gesammelt wie ein persönliches Photocard-Binder fürs Herz.
+            Every artist, tour, festival, and stage moment I have seen live,
+            collected like a personal photocard binder for the heart.
           </p>
         </div>
       </section>
     </header>
 
     <main>
-      <section class="stats" aria-label="Statistik">
+      <section class="stats" aria-label="Statistics">
         <article>
           <span id="artist-count">0</span>
           <p>Artists</p>
         </article>
         <article>
           <span id="concert-count">0</span>
-          <p>Einträge</p>
+          <p>Entries</p>
         </article>
         <article>
           <span id="city-count">0</span>
-          <p>Städte</p>
+          <p>Cities</p>
         </article>
       </section>
 
-      <section id="konzerte" class="concerts" aria-labelledby="concerts-title">
+      <section id="concerts" class="concerts" aria-labelledby="concerts-title">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Archive</p>
-            <h2 id="concerts-title">Live gesehen</h2>
+            <h2 id="concerts-title">Seen Live</h2>
           </div>
           <div class="list-tools">
             <label class="search">
-              <span>Suchen</span>
+              <span>Search</span>
               <input
                 id="search-input"
                 type="search"
-                placeholder="Artist, Tour, Stadt, Jahr..."
+                placeholder="Artist, tour, city, year..."
                 autocomplete="off"
               />
             </label>
-            <div class="sort-control" aria-label="Sortierung">
+            <div class="sort-control" aria-label="Sorting">
               <button class="sort-button is-active" type="button" data-sort="date">
-                Datum ↓
+                Date ↓
               </button>
               <button class="sort-button" type="button" data-sort="artist">
                 Artist
               </button>
               <button class="sort-button" type="button" data-sort="city">
-                Stadt
+                City
               </button>
             </div>
           </div>
@@ -77,13 +77,13 @@
 
         <div id="concert-list" class="concert-list" aria-live="polite"></div>
         <p id="empty-state" class="empty-state" hidden>
-          Kein Match im Archiv.
+          No match in the archive.
         </p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Made for encore nights, bias wreckers und Songs, die live anders treffen.</p>
+      <p>Made for encore nights, bias wreckers, and songs that hit different live.</p>
     </footer>
 
     <script src="app.js?v=20260527-list-v2" type="module"></script>

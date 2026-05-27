@@ -12,7 +12,7 @@ const state = {
   concerts: [],
 };
 
-const collator = new Intl.Collator("de", {
+const collator = new Intl.Collator("en", {
   numeric: true,
   sensitivity: "base",
 });
@@ -21,7 +21,7 @@ const formatDate = (value) => {
   if (!value) return "TBA";
   const date = new Date(`${value}T12:00:00`);
 
-  return new Intl.DateTimeFormat("de-DE", {
+  return new Intl.DateTimeFormat("en-US", {
     year: "numeric",
     month: "short",
     day: "2-digit",
@@ -50,7 +50,7 @@ const renderStats = (concerts) => {
 const renderConcerts = (concerts) => {
   const header = document.createElement("div");
   header.className = "concert-list-header";
-  ["Datum", "Artist", "Event", "Ort", "Typ"].forEach((label) => {
+  ["Date", "Artist", "Event", "Place", "Type"].forEach((label) => {
     const cell = document.createElement("span");
     cell.textContent = label;
     header.append(cell);
@@ -64,7 +64,7 @@ const renderConcerts = (concerts) => {
 
       const date = document.createElement("div");
       date.className = "concert-date concert-cell";
-      date.append(createLabel("Datum"));
+      date.append(createLabel("Date"));
       date.append(document.createTextNode(formatDateRange(concert)));
 
       const artist = document.createElement("div");
@@ -81,7 +81,7 @@ const renderConcerts = (concerts) => {
 
       const place = document.createElement("div");
       place.className = "concert-cell";
-      place.append(createLabel("Ort"));
+      place.append(createLabel("Place"));
       const venue = document.createElement("p");
       venue.className = "concert-venue";
       venue.textContent = concert.venue;
@@ -161,10 +161,10 @@ const updateSortButtons = () => {
     const isActive = button.dataset.sort === state.sortKey;
     const directionLabel = state.sortDirection === "asc" ? "↑" : "↓";
     const label = button.dataset.sort === "date"
-      ? "Datum"
+      ? "Date"
       : button.dataset.sort === "artist"
         ? "Artist"
-        : "Stadt";
+        : "City";
 
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-pressed", isActive.toString());
@@ -208,5 +208,5 @@ const init = async () => {
 };
 
 init().catch(() => {
-  list.textContent = "Die Konzertdaten konnten nicht geladen werden.";
+  list.textContent = "The concert data could not be loaded.";
 });

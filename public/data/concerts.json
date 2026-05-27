@@ -4,9 +4,27 @@
     "artist": "TWICE",
     "event": "THIS IS FOR",
     "venue": "LANXESS arena",
-    "city": "Köln",
+    "city": "Cologne",
     "country": "Germany",
     "type": "Concert"
+  },
+  {
+    "date": "2026-05-09",
+    "artist": "CHANGMO",
+    "event": "CHANGMO: The Emperor",
+    "venue": "Sejong Center for the Performing Arts",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Concert"
+  },
+  {
+    "date": "2026-05-02",
+    "artist": "Various Artists",
+    "event": "HIPHOPPLAYA Festival 2026",
+    "venue": "KINTEX Exhibition Hall 2, Halls 9-10",
+    "city": "Goyang",
+    "country": "South Korea",
+    "type": "Festival"
   },
   {
     "date": "2026-05-03",
@@ -126,12 +144,66 @@
     "type": "Concert"
   },
   {
-    "date": "2025-02-22",
+    "date": "2025-09-27",
     "artist": "XLOV",
-    "event": "Type of X",
-    "venue": "Space Brick",
+    "event": "CLOXE 2U",
+    "venue": "Seoul",
     "city": "Seoul",
     "country": "South Korea",
-    "type": "Fanmeeting"
+    "type": "Fan Meeting"
+  },
+  {
+    "date": "2025-09-26",
+    "artist": "KAI",
+    "event": "KAION Encore in Seoul",
+    "venue": "Jangchung Arena",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Concert"
+  },
+  {
+    "date": "2024-10-05",
+    "artist": "Various Artists",
+    "event": "K-Link Festival 2024",
+    "venue": "INSPIRE Arena",
+    "city": "Incheon",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-09-29",
+    "artist": "Various Artists",
+    "event": "Gangnam Festival 2024 K-Pop Concert",
+    "venue": "COEX East Square",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Festival"
+  },
+  {
+    "date": "2024-05-11",
+    "artist": "LE SSERAFIM",
+    "event": "FEARNADA 2024 S/S - SEOUL",
+    "venue": "Jamsil Indoor Stadium",
+    "city": "Seoul",
+    "country": "South Korea",
+    "type": "Fan Meeting"
+  },
+  {
+    "date": "2024-02-24",
+    "artist": "emlyn",
+    "event": "suck it up & cry yourself to sleep tour",
+    "venue": "headCRASH",
+    "city": "Hamburg",
+    "country": "Germany",
+    "type": "Concert"
+  },
+  {
+    "date": "2019-11-30",
+    "artist": "Rich Brian",
+    "event": "The Sailor",
+    "venue": "Huxleys Neue Welt",
+    "city": "Berlin",
+    "country": "Germany",
+    "type": "Concert"
   }
 ]
