@@ -1,0 +1,30 @@
+name: Deploy website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install SSH key
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "${{ secrets.NETCUP_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p "${{ secrets.NETCUP_SSH_PORT }}" "${{ secrets.NETCUP_SSH_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Deploy public folder with rsync
+        run: |
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/deploy_key -p ${{ secrets.NETCUP_SSH_PORT }}" \
+            public/ \
+            "${{ secrets.NETCUP_SSH_USER }}@${{ secrets.NETCUP_SSH_HOST }}:${{ secrets.NETCUP_REMOTE_PATH }}"

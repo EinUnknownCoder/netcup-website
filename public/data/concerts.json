@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2025-08-16",
+    "artist": "Beispiel Artist",
+    "venue": "Beispielhalle",
+    "city": "Berlin",
+    "country": "Deutschland",
+    "type": "Konzert"
+  },
+  {
+    "date": "2024-06-22",
+    "artist": "Festival Headliner",
+    "venue": "Sommer Festival",
+    "city": "Hamburg",
+    "country": "Deutschland",
+    "type": "Festival"
+  },
+  {
+    "date": "2023-11-04",
+    "artist": "Support Act",
+    "venue": "Club Bühne",
+    "city": "Köln",
+    "country": "Deutschland",
+    "type": "Clubshow"
+  }
+]

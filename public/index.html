@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Eine persönliche Sammlung von Konzerten und Artists, die ich live gesehen habe."
+    />
+    <title>Meine Konzertchronik</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="topbar" aria-label="Hauptnavigation">
+        <a class="brand" href="#">Konzertchronik</a>
+        <a class="topbar-link" href="#konzerte">Konzerte</a>
+      </nav>
+
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Live gesehen, laut erinnert</p>
+        <h1 id="page-title">Meine Konzertchronik</h1>
+        <p class="hero-copy">
+          Eine wachsende Liste aller Artists, Festivals und Shows, die ich live
+          erlebt habe.
+        </p>
+      </section>
+    </header>
+
+    <main>
+      <section class="stats" aria-label="Statistik">
+        <article>
+          <span id="artist-count">0</span>
+          <p>Artists</p>
+        </article>
+        <article>
+          <span id="concert-count">0</span>
+          <p>Einträge</p>
+        </article>
+        <article>
+          <span id="city-count">0</span>
+          <p>Städte</p>
+        </article>
+      </section>
+
+      <section id="konzerte" class="concerts" aria-labelledby="concerts-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Archiv</p>
+            <h2 id="concerts-title">Gesehene Konzerte</h2>
+          </div>
+          <label class="search">
+            <span>Suchen</span>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Artist, Ort, Jahr..."
+              autocomplete="off"
+            />
+          </label>
+        </div>
+
+        <div id="concert-list" class="concert-list" aria-live="polite"></div>
+        <p id="empty-state" class="empty-state" hidden>
+          Keine passenden Konzerte gefunden.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Gebaut als persönliches Live-Musik-Archiv.</p>
+    </footer>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
