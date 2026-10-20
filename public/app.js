@@ -178,7 +178,7 @@ const renderCurrentView = () => {
 };
 
 const init = async () => {
-  const response = await fetch("./data/concerts.json");
+  const response = await fetch("./data/concerts.json", { cache: "no-cache" });
   const concerts = await response.json();
   state.concerts = concerts;
 
