@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10-13",
+    "artist": "Khalid",
+    "event": "It's Always Summer Somewhere Tour",
+    "venue": "Uber Eats Music Hall",
+    "city": "Berlin",
+    "country": "Germany",
+    "type": "Concert"
+  },
+  {
     "date": "2026-08-23",
     "artist": "Joji",
     "event": "SOLARIS",
